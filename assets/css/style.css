@@ -10,10 +10,15 @@
 	box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
+  
 }
 
 /*style général*/
+body{
+width: auto;
+height: auto;
+}
+
 .bg-color {
   background-color: #fff;
 }
@@ -34,11 +39,20 @@ h1, h2, h5{
   font-family: 'Play', sans-serif;;
 }
 
-/*style du header*/
+p, li, label, option, button {
+  font-family: 'Trebuchet MS', sans-serif !important;
+} 
 
-#header {
-  height: auto;
+
+/*style du header*/
+header{
   width: auto;
+  height: 65vh;
+}
+#firstDiv {
+  width: 100%;
+  height: auto;
+  
 }
 
 #banner {
@@ -54,7 +68,7 @@ h1, h2, h5{
 .banner-img {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 65vh;
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -67,4 +81,79 @@ h1, h2, h5{
 }
 .banner-txt{
   text-align: center;
+}
+/*style du formulaire*/
+form{
+  margin:30vh ;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  
+  opacity: 0.8;
+}
+select, label, input {
+  padding: 5px 0px !important;
+  margin:5px !important;
+}
+
+#divForm{
+  display: flex; 
+  justify-content: center;
+  align-items: flex-end;
+}
+.btn-form{
+  width: 30%;
+  cursor: pointer;
+  padding: 13;
+  border: none;
+  
+}
+/*MAIN*/
+main{
+  width: auto;
+}
+
+main > div{
+  margin: 0px 15%;
+}
+
+.car{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*menu style*/
+#menu-position{
+  position: relative;
+  left: 195vh;
+  top: -63vh;
+}
+
+.menu-icon {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+ul {
+  width: 100%;
+}
+
+/*footer*/
+footer {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 35px;
+}
+
+footer p {
+  padding-left: 50px;
+}
+span {
+  font-weight: bold;
 }
