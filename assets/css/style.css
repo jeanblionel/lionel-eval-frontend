@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-@font-face {
-  font-family: "Trebuchet MS", sans-serif;
-  src: url();
-}
+
 * {
   
   -webkit-box-sizing: border-box;
@@ -49,7 +46,7 @@ header{
   width: auto;
   height: 65vh;
 }
-#firstDiv {
+#divPrincipale {
   width: 100%;
   height: auto;
   
@@ -82,6 +79,8 @@ header{
 .banner-txt{
   text-align: center;
 }
+
+
 /*style du formulaire*/
 form{
   margin:30vh ;
@@ -105,17 +104,46 @@ select, label, input {
 .btn-form{
   width: 30%;
   cursor: pointer;
-  padding: 13;
+  padding: 13px;
   border: none;
   
 }
-/*MAIN*/
+
+/*menu style*/
+#menu-position{
+  position: relative;
+  left: 195vh;
+  top: -63vh;
+  background :none
+}
+
+.menu-icon {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+ul {
+  width: 100%;
+}
+
+/*Style main*/
+
 main{
   width: auto;
 }
 
 main > div{
-  margin: 0px 15%;
+  margin: 0px 0% 0px 15%;
+}
+#filtre {
+  display: flex;
+  justify-content: end;
+}
+
+hr, #filtre {
+  width: 90%;
 }
 
 .car{
@@ -123,23 +151,32 @@ main > div{
   flex-wrap: wrap;
 }
 
-
-/*menu style*/
-#menu-position{
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
   position: relative;
-  left: 195vh;
-  top: -63vh;
 }
 
-.menu-icon {
-  width: 35px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 0;
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  left: 350px;
 }
 
-ul {
-  width: 100%;
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 15px;
+}
+
+article button {
+  border: none;
+}
+
+.gradiant {
+  background: radial-gradient( #59b459 95%, #4e984f 0%);
 }
 
 /*footer*/

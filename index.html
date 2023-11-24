@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="agence de location de voiture, réservation en ligne."/>
     <title>Bienvenue à bord</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <div id="firstDiv banner">
+        <div id="divPrincipale banner">
             <div>
                 <img class="banner-img" src="./assets/images/slideshow/background.jpg" alt="Banner">
                 <p class="banner-text">
@@ -29,7 +30,7 @@
                     <input type="date" name="datemin" id="datemin" min="2023-11-24">
                     <label for="datemax"></label>
                     <input type="date" name="datemax" id="datemax" max="2030-01-01">
-                    <button type="submit" [disabled]="!form.form.valid" class="gradiant-color btn-form">
+                    <button type="submit" class="gradiant-color btn-form">
                         Valider ma recherche
                     </button>
                 </form>
@@ -59,16 +60,23 @@
     <main>
         <div>
             <div id="filtre">
-                <p> {{carLocation.length}} résultat </p>
+                <select name="price" id="price" class="rounded">
+                    <option value="croissant">prix croissant</option>
+                    <option value="decroissant">prix décroissant</option>
+                </select>
             </div>
         
             <article class="car">
-                <div> <img src="assets/images/vehicule1.png" alt=""></div>
+                <div>
+                    <i class="arrow left"></i>
+                    <i class="arrow right"></i>
+                     <img src="assets/images/vehicule1.png" alt="voiture à louer">
+                </div>
                 <div>
                     <h5>Peugeot 208</h5>
                     <p>Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
                     <p>999€ - Agence de paris</p>
-                    <button class="primary-color secondary-color">Réserver et payer</button>
+                    <button class="primary-color gradiant rounded p-1">Réserver et payer</button>
                 </div>
             </article>
             <hr>
@@ -80,7 +88,7 @@
     
 
     <footer>
-        <img src="assets/images/agence.jpg" alt="">
+        <img src="assets/images/agence.jpg" alt="notre agence à paris">
         <p>Notre Agence de <span>Paris</span>  <br>
         300 boulevard de vaugirard, 75015, Paris <br>
         Ouvert 7j/7 de 09h à 13h et de 14h à 20h <br>
